@@ -1,0 +1,13 @@
+﻿@page
+@model RandomLetterApp.Pages.RestaurantModel
+@{
+    ViewData["Title"] = "Рестораны";
+}
+
+<h2>@ViewData["Title"]</h2>
+<ul>
+    @foreach (var restaurant in Model.Restaurants)
+    {
+        <li>@restaurant.Name - @restaurant.Cuisine - @restaurant.Address</li>
+    }
+</ul>
